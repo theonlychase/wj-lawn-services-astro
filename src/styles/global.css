@@ -6,7 +6,7 @@
   name: 'light';
   color-scheme: light;
 
-  --color-primary: oklch(70.5% 0.213 47.604);
+  --color-primary: oklch(0.77 0.16 58.07);
   --color-secondary: oklch(0.36 0.05 162.48);
 }
 
