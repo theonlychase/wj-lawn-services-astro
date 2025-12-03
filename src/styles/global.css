@@ -47,6 +47,29 @@
       background-color: color-mix(in oklab, var(--color-neutral) 40%, transparent);
     }
   }
+
+  .hero-overlay-dark {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    height: 100%;
+    width: 100%;
+
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-neutral) 40%, transparent);
+    }
+  }
+
+  /*
+  .diff-item-2 {
+    &::after {
+      content: "⇄";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--color-black);
+    }
+  }
+   */
 }
 
 @theme {
