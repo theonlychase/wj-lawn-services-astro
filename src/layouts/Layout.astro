@@ -1,20 +1,26 @@
 ---
-import "../styles/global.css";
+import "@/styles/global.css";
 import Header from "@/components/layout/Header.astro";
 import Footer from "@/components/layout/Footer.astro";
 import Page from "@/components/layout/Page.astro";
 
 interface Props {
   description?: string;
+  full?: boolean;
   id?: string;
   title: string;
 }
 
-const { description = "Default Description", id, title } = Astro.props;
+const {
+  description = "Default Description",
+  full = false,
+  id,
+  title,
+} = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -27,7 +33,7 @@ const { description = "Default Description", id, title } = Astro.props;
     <div id="app">
       <Header />
 
-      <Page>
+      <Page full={full}>
         <slot />
       </Page>
 

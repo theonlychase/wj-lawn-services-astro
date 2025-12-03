@@ -1,5 +1,25 @@
-<div id="page" class="relative flex flex-col flex-1 px-4 lg-up:px-0">
-  <div class="flex flex-col flex-1 w-full my-8 mx-auto max-w-screen-lg">
+---
+interface Props {
+  full?: boolean;
+}
+
+const { full = false } = Astro.props;
+---
+
+<div
+  id="page"
+  class:list={[
+    "relative flex flex-col flex-1",
+    { "w-full": full, "px-4 lg-up:px-0": !full },
+  ]}
+>
+  <div
+    class:list={[
+      "flex flex-col flex-1 w-full",
+      { "mx-auto max-w-screen-lg my-8": !full },
+    ]}
+    class=""
+  >
     <slot />
   </div>
 </div>

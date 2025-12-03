@@ -1,7 +1,11 @@
 ---
 import Layout from "@/layouts/Layout.astro";
+import HomeHero from "@/components/home/HomeHero.astro";
+import HomeHeroFooter from "@/components/home/HomeHeroFooter.astro";
 ---
 
-<Layout title="Page Title">
-  <div></div>
+<Layout full title="Page Title">
+  <HomeHero />
+  <div class="h-[500px]"></div>
+  <HomeHeroFooter />
 </Layout>
