@@ -1,3 +1,25 @@
+---
+import { Image } from "astro:assets";
+import before1 from "@/assets/images/before-1.jpg";
+import before2 from "@/assets/images/before-2.jpg";
+import before3 from "@/assets/images/before-3.jpg";
+import after1 from "@/assets/images/after-1.jpg";
+import after2 from "@/assets/images/after-2.jpg";
+import after3 from "@/assets/images/after-3.jpg";
+import lawn1 from "@/assets/images/lawn1.jpeg";
+import lawn2 from "@/assets/images/lawn2.jpeg";
+import lawn3 from "@/assets/images/lawn3.jpeg";
+import lawn4 from "@/assets/images/lawn4.jpeg";
+import lawn5 from "@/assets/images/lawn5.jpeg";
+import lawn6 from "@/assets/images/lawn6.jpeg";
+import landscape1before from "@/assets/images/landscape-1-before.jpeg";
+import landscape1after from "@/assets/images/landscape-1-after.jpeg";
+import landscape2before from "@/assets/images/landscape-2-before.jpeg";
+import landscape2after from "@/assets/images/landscape-2-after.jpeg";
+import sod1before from "@/assets/images/sod-2-before.jpeg";
+import sod1after from "@/assets/images/sod-1-after.jpeg";
+---
+
 <div class="mx-auto my-16 w-full max-w-5xl px-4 lg:px-0">
   <div class="flex gap-x-2">
     <div class="mb-8 text-5xl font-semibold">Our Work</div>
@@ -18,35 +40,125 @@
     </div>
   </div>
 
-  <div class="grid w-full gap-8 sm:grid-cols-2">
-    <figure class="diff aspect-16/9 rounded shadow" tabindex="0">
+  <div class="mb-12 grid w-full gap-8 sm:grid-cols-2">
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
       <div class="diff-item-1" role="img" tabindex="0">
-        <img alt="Before" class="aspect-video" src="/images/before-3.jpg" />
+        <Image alt="Before" src={before3} />
       </div>
       <div class="diff-item-2" role="img">
-        <img alt="After" src="/images/after-1.jpg" />
-      </div>
-      <div class="diff-resizer">hello</div>
-    </figure>
-
-    <figure class="diff aspect-16/9 rounded shadow" tabindex="0">
-      <div class="diff-item-1" role="img" tabindex="0">
-        <img alt="Before" src="/images/before-2.jpg" />
-      </div>
-      <div class="diff-item-2" role="img">
-        <img alt="After" src="/images/after-2.jpg" />
+        <Image alt="After" src={after1} />
       </div>
       <div class="diff-resizer"></div>
     </figure>
 
-    <figure class="diff aspect-16/9 rounded shadow" tabindex="0">
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
       <div class="diff-item-1" role="img" tabindex="0">
-        <img alt="Before" src="/images/before-1.jpg" />
+        <Image alt="Before" src={before2} />
       </div>
       <div class="diff-item-2" role="img">
-        <img alt="After" src="/images/after-3.jpg" />
+        <Image alt="After" src={after2} />
       </div>
       <div class="diff-resizer"></div>
     </figure>
+
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
+      <div class="diff-item-1" role="img" tabindex="0">
+        <Image alt="Before" src={before1} />
+      </div>
+      <div class="diff-item-2" role="img">
+        <Image alt="After" src={after3} />
+      </div>
+      <div class="diff-resizer"></div>
+    </figure>
+
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
+      <div class="diff-item-1" role="img" tabindex="0">
+        <Image alt="Before" src={landscape1before} />
+      </div>
+      <div class="diff-item-2" role="img">
+        <Image alt="After" src={landscape1after} />
+      </div>
+      <div class="diff-resizer"></div>
+    </figure>
+
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
+      <div class="diff-item-1" role="img" tabindex="0">
+        <Image alt="Before" src={landscape2before} />
+      </div>
+      <div class="diff-item-2" role="img">
+        <Image alt="After" src={landscape2after} />
+      </div>
+      <div class="diff-resizer"></div>
+    </figure>
+
+    <figure class="diff aspect-4/3 rounded shadow" tabindex="0">
+      <div class="diff-item-1" role="img" tabindex="0">
+        <Image alt="Before" src={sod1before} />
+      </div>
+      <div class="diff-item-2" role="img">
+        <Image alt="After" src={sod1after} />
+      </div>
+      <div class="diff-resizer"></div>
+    </figure>
+  </div>
+
+  <div>
+    <div class="mb-8 text-5xl font-semibold">Lawn Care</div>
+
+    <div class="mb-12 flex justify-center">
+      <div class="grid overflow-hidden rounded-box *:[grid-area:1/1]">
+        <figure class="hover-gallery aspect-4/3">
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 1"
+            src={lawn1}
+          />
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 2"
+            src={lawn2}
+          />
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 3"
+            src={lawn3}
+          />
+        </figure>
+        <div
+          class="text-shadow-xl pointer-events-none grid grid-cols-2 text-2xl text-white *:grid *:place-content-center *:bg-linear-80 *:from-white/10 *:via-transparent *:to-black/10"
+        >
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flex justify-center">
+      <div class="grid overflow-hidden rounded-box *:[grid-area:1/1]">
+        <figure class="hover-gallery aspect-4/3">
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 5"
+            src={lawn5}
+          />
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 6"
+            src={lawn6}
+          />
+          <Image
+            class="aspect-4/3 h-full w-full rounded object-cover object-center"
+            alt="Lawn Care Job 4"
+            src={lawn4}
+          />
+        </figure>
+        <div
+          class="text-shadow-xl pointer-events-none grid grid-cols-2 text-2xl text-white *:grid *:place-content-center *:bg-linear-80 *:from-white/10 *:via-transparent *:to-black/10"
+        >
+          <div>2</div>
+          <div>3</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

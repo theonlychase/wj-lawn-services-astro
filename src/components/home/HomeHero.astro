@@ -1,10 +1,18 @@
-<div
-  class="relative hero max-h-119 bg-center"
-  style="background-image: url(/images/hero-3.webp);"
->
-  <div class="hero-overlay"></div>
+---
+import { Image } from "astro:assets";
+import heroImg from "../../assets/images/hero-3.webp";
+---
+
+<div class="relative hero max-h-119 bg-center">
+  <Image
+    src={heroImg}
+    alt="Premium Lawn Care & Landscaping"
+    class="absolute inset-0 h-full w-full object-cover"
+    loading="eager"
+  />
+  <div class="z-10 hero-overlay"></div>
   <div
-    class="hero-content w-full max-w-xl flex-col pb-0 text-neutral-content md:max-w-5xl"
+    class="hero-content z-20 w-full max-w-xl flex-col pb-0 text-neutral-content md:max-w-5xl"
   >
     <div class="w-full">
       <h1 class="mb-5 pt-20 text-4xl font-bold md:text-6xl">
