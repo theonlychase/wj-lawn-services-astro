@@ -1,6 +1,6 @@
 {
   "extends": "astro/tsconfigs/strict",
-  "include": [".astro/types.d.ts", "**/*"],
+  "include": [".astro/types.d.ts", "auto-imports.d.ts", "**/*"],
   "exclude": ["dist"],
   "compilerOptions": {
     "paths": {
@@ -9,7 +9,7 @@
     "plugins": [
       {
         "name": "@astrojs/ts-plugin"
-      },
-    ],
+      }
+    ]
   }
 }

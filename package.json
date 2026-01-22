@@ -3,27 +3,32 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "dev": "astro dev --remote",
-    "dev-local": "astro dev",
-    "build": "astro build --remote",
-    "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "check": "astro check",
+    "dev": "astro check && astro dev --remote",
+    "dev-local": "astro check && astro dev",
+    "build": "astro check && astro build --remote",
+    "preview": "astro check && astro preview"
   },
   "dependencies": {
-    "@astrojs/db": "^0.18.3",
-    "@astrojs/netlify": "^6.6.3",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/netlify": "^6.6.4",
     "@tailwindcss/vite": "^4.1.18",
-    "astro": "^5.16.8",
+    "astro": "^5.16.13",
     "daisyui": "^5.5.14",
+    "glob": "^13.0.0",
     "nanostores": "^1.1.0",
     "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@astrojs/ts-plugin": "^1.10.6",
-    "@typescript-eslint/parser": "^8.52.0",
+    "@typescript-eslint/parser": "^8.53.1",
     "eslint": "^9.39.2",
     "eslint-plugin-astro": "^1.5.0",
-    "prettier": "3.7.4",
-    "prettier-plugin-astro": "0.14.1"
+    "prettier": "3.8.1",
+    "prettier-plugin-astro": "0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "typescript": "^5.9.3",
+    "unplugin-auto-import": "^21.0.0"
   }
 }

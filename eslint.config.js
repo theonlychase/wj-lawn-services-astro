@@ -2,6 +2,7 @@ import eslintPluginAstro from "eslint-plugin-astro";
 export default [
   ...eslintPluginAstro.configs.recommended,
   {
+    extends: ["./.eslintrc-auto-import.json"],
     files: ["**/*.astro"],
     parser: "astro-eslint-parser",
     parserOptions: {

@@ -1,16 +1,23 @@
-<div
-  class="relative hero bg-center min-h-[325px]"
-  style="background-image: url(/images/mow-lawn.jpg);"
->
+---
+import { Image } from "astro:assets";
+import mowLawnImg from "@/assets/images/mow-lawn.jpg";
+---
+
+<div class="relative hero min-h-81.25 bg-center">
+  <Image
+    src={mowLawnImg}
+    alt="Mowing lawn"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
   <div class="hero-overlay backdrop-blur-sm"></div>
   <div
-    class="hero-content flex-col text-neutral-content w-full max-w-xl md:max-w-5xl py-0"
+    class="hero-content w-full max-w-xl flex-col py-0 text-neutral-content md:max-w-5xl"
   >
     <div class="w-full">
-      <h1 class="mb-5 text-4xl md:text-5xl font-bold">Why Choose Us</h1>
+      <h1 class="mb-5 text-4xl font-bold md:text-5xl">Why Choose Us</h1>
 
       <div
-        class="max-w-2xl flex flex-col gap-y-5 text-xs sm:text-sm text-neutral-300"
+        class="flex max-w-2xl flex-col gap-y-5 text-xs text-neutral-300 sm:text-sm"
       >
         <p>
           Transform your outdoor space with professional service and attention

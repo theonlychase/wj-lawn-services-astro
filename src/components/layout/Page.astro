@@ -9,14 +9,14 @@ const { full = false } = Astro.props;
 <div
   id="page"
   class:list={[
-    "relative flex flex-col flex-1",
-    { "w-full": full, "px-4 lg-up:px-0": !full },
+    "relative flex flex-1 flex-col",
+    { "w-full": full, "lg-up:px-0 px-4": !full },
   ]}
 >
   <div
     class:list={[
-      "flex flex-col flex-1 w-full",
-      { "mx-auto max-w-screen-lg my-8": !full },
+      "flex w-full flex-1 flex-col",
+      { "mx-auto my-8 max-w-5xl": !full },
     ]}
     class=""
   >
