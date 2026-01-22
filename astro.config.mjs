@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import netlify from "@astrojs/netlify";
 import AutoImport from "unplugin-auto-import/astro";
-import { glob } from "glob";
 
 // https://astro.build/config
 export default defineConfig({
